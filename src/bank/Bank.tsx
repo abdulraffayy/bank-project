@@ -15,7 +15,7 @@ const tableData = [
   { id: 9, description: "Digital Marketing Seminar", fee: "$400", hours: "25 Hrs", amount: "$500" },
 ];
 
-const Client = () => {
+const Bank = () => {
   const [tableshow, setTable] = useState(tableData);
   const [isEditing, setIsEditing] = useState(false);
   const [editItem, setEditItem] = useState(null);
@@ -218,42 +218,46 @@ const Client = () => {
               </div>
             </div>
           )}
-          <div className="container-totoal flex items-center justify-between ">
-            <div className="left-side ml-4">
-              <h1 className="text-blue-500">INVOICE TOTAL</h1>
-              <h2>RS 19,600/-</h2>
-            </div>
+     <div className="container-totoal flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4">
+  {/* Left Side */}
+  <div className="left-side">
+    <h1 className="text-blue-500 text-lg sm:text-xl">INVOICE TOTAL</h1>
+    <h2 className="text-2xl sm:text-3xl font-semibold">RS 19,600/-</h2>
+  </div>
 
-
-
-            <div className="rupees flex items-center gap-4">
-              <div className="div">
-                <h2 className="text-xl font-bold text-blue-500">SUB TOTAL</h2>
-              </div>
-              <h3>RS 19,600/-</h3>
-            </div>
-          </div>
-          <div className="container-sides flex flex-wrap items-start justify-between mt-8 p-4 w-full">
-
-<div className="left-payment ">
-  <h1 className="font-bold text-lg mb-2 text-blue-500">Payment Details</h1>
-  <h2 className="text-gray-700 font-semibold">AC Holder: BASES THERAPY CLINIC PVT LTD</h2>
-  <h3 className="text-gray-700 font-semibold">Bank Name: BANK ALFALAH</h3>
-  <h4 className="text-gray-700 font-semibold">Account No: 0148-1006845095</h4>
-  <h5 className="text-gray-700 font-semibold">IBAN: PK79ALFH0148001006845095</h5>
+  {/* Right Side */}
+  <div className="rupees flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
+    <div>
+      <h2 className="text-lg sm:text-xl font-bold text-blue-500">SUB TOTAL</h2>
+    </div>
+    <h3 className="text-xl sm:text-2xl font-semibold">RS 19,600/-</h3>
+  </div>
 </div>
 
+        
 
-<div className="right-sides   flex flex-col justify-end mt-2">
-  <h1 className="font-bold text-lg mb-2 text-blue-500 mt-3">
-    Bases: Behavior and Special Education Services
-  </h1>
-</div>
+
+<div className="container-sides flex flex-wrap items-start justify-between mt-8 p-4 w-full">
+
+  <div className="left-payment ">
+    <h1 className="font-bold text-lg mb-2 text-blue-500">Payment Details</h1>
+    <h2 className="text-gray-700 font-semibold">AC Holder: BASES THERAPY CLINIC PVT LTD</h2>
+    <h3 className="text-gray-700 font-semibold">Bank Name: BANK ALFALAH</h3>
+    <h4 className="text-gray-700 font-semibold">Account No: 0148-1006845095</h4>
+    <h5 className="text-gray-700 font-semibold">IBAN: PK79ALFH0148001006845095</h5>
+  </div>
+
+
+  <div className="right-sides   flex flex-col justify-end mt-2">
+    <h1 className="font-bold text-lg mb-2 text-blue-500 mt-3">
+      Bases: Behavior and Special Education Services
+    </h1>
+  </div>
 </div>
 
           <div className="container-term-left w-full flex flex-col sm:items-center md:flex-row md:items-center justify-between gap-6 p-4 border-t border-gray-300 mt-4">
 
-            <div className="left-terms md:w-1/2 text-center md:text-left w-[40%] ">
+            <div className="left-terms md:w-1/2 text-center md:text-left">
               <h1 className="text-xl font-semibold mb-2 text-blue-500">Terms and Conditions</h1>
               <p className="text-gray-600 leading-relaxed font-semibold">
                 Kindly be aware that all fees paid for our products/services are non-refundable.
@@ -277,4 +281,4 @@ const Client = () => {
   );
 };
 
-export default Client;
+export default Bank;

@@ -15,7 +15,7 @@ const tableData = [
   { id: 9, description: "Digital Marketing Seminar", fee: "$400", hours: "25 Hrs", amount: "$500" },
 ];
 
-const Client = () => {
+const Office = () => {
   const [tableshow, setTable] = useState(tableData);
   const [isEditing, setIsEditing] = useState(false);
   const [editItem, setEditItem] = useState(null);
@@ -277,4 +277,4 @@ const Client = () => {
   );
 };
 
-export default Client;
+export default Office;
